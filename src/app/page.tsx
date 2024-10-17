@@ -3,12 +3,16 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import logoSVG from "../assets/brand/logo.svg";
-import Footer from "./search/components/results/Results";
-import useSearchData from "./hooks/useSearchData";
 import Searchbar from "./components/searchbar/Searchbar";
+import Footer from "./components/footer/Footer";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const searchData = useSearchData();
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const router = useRouter();
+
+  const onSubmit = (value: string) => router.push(`/search?q=${value}`);
 
   return (
     <div className={styles.search}>
@@ -20,7 +24,12 @@ export default function Home() {
           priority
         />
         <span className={styles.heading}>Clinical Trial Search</span>
-        <Searchbar {...searchData} />
+        <Searchbar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          onSubmit={onSubmit}
+          isMainPage
+        />
       </div>
       <Footer />
     </div>
