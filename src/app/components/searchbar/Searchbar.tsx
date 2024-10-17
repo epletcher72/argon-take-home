@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./searchbar.module.scss";
-import searchSVG from "../../../../assets/icons/search.svg";
+import searchSVG from "../../../assets/icons/search.svg";
 import { useRef } from "react";
 import { SearchData } from "../../hooks/useSearchData";
 

@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./search.module.scss";
+import styles from "./page.module.scss";
 import logoSVG from "../../assets/brand/logo.svg";
-import Searchbar from "./components/searchbar/Searchbar";
-import Footer from "./components/results/Results";
-import Results from "./components/results/Results";
-import useSearchData from "./hooks/useSearchData";
+import Footer from "../search/components/results/Results";
+import Results from "../search/components/results/Results";
+import useSearchData from "../hooks/useSearchData";
+import Searchbar from "../components/searchbar/Searchbar";
 
 export default function Search() {
   const searchData = useSearchData();
