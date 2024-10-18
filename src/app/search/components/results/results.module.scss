@@ -6,6 +6,7 @@
   .list {
     position: relative;
     flex: 1;
+    max-width: 60%;
     overflow-y: scroll;
   }
   .previewwrapper {
@@ -17,6 +18,7 @@
     .preview {
       width: 100%;
       padding: 30px;
+      padding-bottom: 0px;
       font-family: Roboto, Arial, sans-serif;
       font-weight: 400;
       display: flex;
