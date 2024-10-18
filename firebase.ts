@@ -7,7 +7,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDcfZbTOZKe5qXO7xSUhrxuwXTj62wRhpA",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
   authDomain: "argon-take-home.firebaseapp.com",
   projectId: "argon-take-home",
   storageBucket: "argon-take-home.appspot.com",

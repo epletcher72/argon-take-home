@@ -1,7 +1,10 @@
 import { searchClient } from "@algolia/client-search";
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
-const client = searchClient("UN5YRM02LE", "79df2ece685901e17121e649d21d3ecb");
+const client = searchClient(
+  "UN5YRM02LE",
+  process.env.NEXT_PUBLIC_ALGOLIA_API_KEY!
+);
 
 const getTrials = async (query: string, pageSize: number) => {
   const response = await client.search({
