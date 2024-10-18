@@ -12,7 +12,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const router = useRouter();
 
-  const onSubmit = (value: string) => router.push(`/search?q=${value}`);
+  const onSubmit = () => router.push(`/search?q=${searchQuery}`);
 
   return (
     <div className={styles.search}>
@@ -24,6 +24,7 @@ export default function Home() {
           priority
         />
         <span className={styles.heading}>Clinical Trial Search</span>
+
         <Searchbar
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}

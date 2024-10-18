@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { SearchData } from "../../hooks/useSearchData";
 
 export type Props = SearchData & {
-  onSubmit: (value: string) => void;
+  onSubmit: (value?: string) => void;
   isMainPage?: boolean;
 };
 
